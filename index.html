@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ستايلي - تنسيقات وأزياء شي إن المميزة</title>
+    <!-- استدعاء Tailwind CSS لتنسيق احترافي وسريع -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- الهيدر (رأس الصفحة) -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-pink-600">ستايلي ✨</h1>
+            <p class="text-sm text-gray-500 hidden sm:block">أفضل تنسيقات شي إن بأرخص الأسعار</p>
+        </div>
+    </header>
+
+    <!-- بنر ترحيبي -->
+    <section class="bg-pink-50 py-12 px-4 text-center">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-3xl font-extrabold text-gray-900 mb-4">تنسيقات وموضة عصرية من شي إن</h2>
+            <p class="text-lg text-gray-600 mb-6">جمعنا لكِ أفضل القطع الأكثر مبيعاً مع كوبونات خصم حصرية. اضغطي على أي قطعة للشراء مباشرة من الموقع الرسمي.</p>
+            <div class="inline-block bg-pink-600 text-white font-bold px-6 py-3 rounded-full shadow-md">
+                استخدمي كود الخصم لشحن مجاني: <span class="bg-white text-pink-600 px-2 py-1 rounded ml-1">STYL10</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- شبكة المنتجات -->
+    <main class="max-w-6xl mx-auto px-4 py-12">
+        <h3 class="text-xl font-bold mb-8 border-r-4 border-pink-600 pr-3">أحدث التنسيقات المضافة</h3>
+        
+        <!-- هنا هيتم عرض المنتجات تلقائياً بواسطة الجافا سكريبت -->
+        <div id="products-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <!-- المنتجات هتنزل هنا -->
+        </div>
+    </main>
+
+    <!-- الفوتر (أسفل الصفحة) -->
+    <footer class="bg-gray-900 text-gray-400 py-8 text-center text-sm border-t border-gray-800">
+        <p>© 2026 موقع ستايلي. جميع الحقوق محفوظة.</p>
+        <p class="mt-2 text-xs">موقعنا يعرض تنسيقات ويحولك للشراء من الموقع الرسمي لـ شي إن للاستفادة من العمولات.</p>
+    </footer>
+
+    <!-- ربط ملف الجافا سكريبت -->
+    <script src="app.js"></script>
+</body>
+</html>
