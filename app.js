@@ -5,7 +5,7 @@ const products = [
         title: "فستان صيفي كاجوال منقوش بنقاط دائرية",
         price: "120 ريال",
         image: "https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=500&q=80", // صورة تجريبية
-        affiliateUrl: "https://www.shein.com", // هنا هتحط رابط الأفيليت الخاص بيك للمنتج ده
+        affiliateUrl: "https://ar.aliexpress.com", // هنا هتحط رابط الأفيليت الخاص بيك للمنتج ده
         tag: "وصل حديثاً"
     },
     {
@@ -13,7 +13,7 @@ const products = [
         title: "طقم قطعتين تيشيرت وشورت مريح يومي",
         price: "85 ريال",
         image: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=500&q=80",
-        affiliateUrl: "https://www.shein.com",
+        affiliateUrl: "https://ar.aliexpress.com",
         tag: "الأكثر مبيعاً"
     },
     {
@@ -21,7 +21,7 @@ const products = [
         title: "حقيبة يد كلاسيكية أنيقة بمقبض علوي",
         price: "95 ريال",
         image: "https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=500&q=80",
-        affiliateUrl: "https://www.shein.com",
+        affiliateUrl: "https://ar.aliexpress.com",
         tag: "خصم 20%"
     },
     {
@@ -29,7 +29,7 @@ const products = [
         title: "حذاء رياضي مريح وخفيف الوزن للركض",
         price: "150 ريال",
         image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&q=80",
-        affiliateUrl: "https://www.shein.com",
+        affiliateUrl: "https://ar.aliexpress.com",
         tag: "شحن مجاني"
     }
 ];
@@ -57,7 +57,7 @@ function displayProducts() {
                 <!-- زر الشراء (رابط الأفيليت) -->
                 <div class="p-4 pt-0">
                     <a href="${product.affiliateUrl}" target="_blank" class="block w-full text-center bg-gray-900 hover:bg-pink-600 text-white font-semibold py-2 rounded-lg transition-colors duration-200">
-                        اشترِ الآن من شي إن 🛒
+                        اشترِ الآن من علي اكسبيرس 🛒
                     </a>
                 </div>
             </div>
