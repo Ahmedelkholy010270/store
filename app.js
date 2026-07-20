@@ -1,42 +1,20 @@
 // مصفوفة المنتجات (هنا بنحط بيانات كل منتج ورابط الأفيليت بتاعه)
 const products = [
-    const products = [
     {
-    id: 1,
-    name: "Lenovo V88 Drone 8K 4K - طائرة درون لينوفو الذكية",
-    price: "1,744 EGP",
-    image: "https://ae01.alicdn.com/kf/S36a082ebf3fb4192804c0552565b0886j.jpg_350x350.jpg", 
-    affiliateUrl: "https://s.click.aliexpress.com/e/_c3C5z1ij"
-    },
-    {
-        id: 2,
-        title: "طقم قطعتين تيشيرت وشورت مريح يومي",
-        price: "85 ريال",
-        image: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=500&q=80",
-        affiliateUrl: "https://ar.aliexpress.com",
-        tag: "الأكثر مبيعاً"
-    },
-    {
-        id: 3,
-        title: "حقيبة يد كلاسيكية أنيقة بمقبض علوي",
-        price: "95 ريال",
-        image: "https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=500&q=80",
-        affiliateUrl: "https://ar.aliexpress.com",
-        tag: "خصم 20%"
-    },
-    {
-        id: 4,
-        title: "حذاء رياضي مريح وخفيف الوزن للركض",
-        price: "150 ريال",
-        image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&q=80",
-        affiliateUrl: "https://ar.aliexpress.com",
-        tag: "شحن مجاني"
+        id: 1,
+        title: "Lenovo V88 Drone 8K 4K - طائرة درون لينوفو الذكية", // تم تعديلها إلى title لتتوافق مع الدالة
+        price: "1,744 EGP",
+        image: "https://ae01.alicdn.com/kf/S36a082ebf3fb4192804c0552565b0886j.jpg_350x350.jpg", 
+        affiliateUrl: "https://s.click.aliexpress.com/e/_c3C5z1ij",
+        tag: "جديد مميز" // تم إضافة التاج عشان يظهر التصميم مظبوط
     }
 ];
 
 // دالة لعرض المنتجات في الصفحة تلقائياً
 function displayProducts() {
     const grid = document.getElementById('products-grid');
+    if (!grid) return; // حماية إضافية لو العنصر مش موجود في الصفحة
+    
     grid.innerHTML = ''; // تفريغ الصفحة الأول
 
     products.forEach(product => {
@@ -57,13 +35,17 @@ function displayProducts() {
                 <!-- زر الشراء (رابط الأفيليت) -->
                 <div class="p-4 pt-0">
                     <a href="${product.affiliateUrl}" target="_blank" class="block w-full text-center bg-gray-900 hover:bg-pink-600 text-white font-semibold py-2 rounded-lg transition-colors duration-200">
-                        اشترِ الآن من علي اكسبيرس 🛒
+                        اشترِ الآن من علي اكسبريس 🛒
                     </a>
                 </div>
             </div>
         `;
         grid.innerHTML += productCard;
     });
+}
+
+// تشغيل الدالة بمجرد تحميل الصفحة
+document.addEventListener('DOMContentLoaded', displayProducts);
 }
 
 // تشغيل الدالة بمجرد تحميل الصفحة
