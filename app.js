@@ -1,13 +1,14 @@
 // مصفوفة المنتجات (هنا بنحط بيانات كل منتج ورابط الأفيليت بتاعه)
 const products = [
-    {
-        id: 1,
-        title: "فستان صيفي كاجوال منقوش بنقاط دائرية",
-        price: "120 ريال",
-        image: "https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=500&q=80", // صورة تجريبية
-        affiliateUrl: "https://ar.aliexpress.com", // هنا هتحط رابط الأفيليت الخاص بيك للمنتج ده
-        tag: "وصل حديثاً"
-    },
+    const products = [
+  {
+    id: 1,
+    name: "Lenovo V88 Drone 8K 4K - طائرة درون لينوفو الذكية",
+    price: "1,744 EGP",
+    image: "https://ae01.alicdn.com/kf/S36a082ebf3fb4192804c0552565b0886j.jpg_350x350.jpg", 
+    affiliateUrl: "https://s.click.aliexpress.com/e/_c3C5z1ij"
+  }
+];,
     {
         id: 2,
         title: "طقم قطعتين تيشيرت وشورت مريح يومي",
