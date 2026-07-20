@@ -1,14 +1,13 @@
 // مصفوفة المنتجات (هنا بنحط بيانات كل منتج ورابط الأفيليت بتاعه)
 const products = [
     const products = [
-  {
+    {
     id: 1,
     name: "Lenovo V88 Drone 8K 4K - طائرة درون لينوفو الذكية",
     price: "1,744 EGP",
     image: "https://ae01.alicdn.com/kf/S36a082ebf3fb4192804c0552565b0886j.jpg_350x350.jpg", 
     affiliateUrl: "https://s.click.aliexpress.com/e/_c3C5z1ij"
-  }
-];,
+    },
     {
         id: 2,
         title: "طقم قطعتين تيشيرت وشورت مريح يومي",
