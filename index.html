@@ -1,75 +1,106 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <!-- عنوان الصفحة اللي بيظهر في جوجل -->
-<title>تيك زون | Tech Zone - متجر الأجهزة الذكية والتقنيات</title>
-
-<!-- وصف المتجر -->
-<meta name="description" content="تسوق أحدث طائرات الدرون، المنتجات الذكية، والتقنيات العصرية بأفضل الأسعار من متجر تيك زون Tech Zone. شحن لمصر والسعودية.">
-
-<!-- الكلمات المفتاحية -->
-<meta name="keywords" content="تيك زون, Tech Zone, طائرة درون, متجر إلكتروني, أجهزة ذكية, درون V88">
-
-<!-- لتوافق الموقع مع الموبايل -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-TF0NP5E97N"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-TF0NP5E97N');
-</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تيك زون | أفضل الأجهزة الذكية من علي إكسبريس</title>
-    <!-- استدعاء Tailwind CSS لتنسيق احترافي وسريع -->
+    <title>تيك زون | Tech Zone - متجر الأجهزة الذكية والتقنيات</title>
+
+    <!-- وصف المتجر -->
+    <meta name="description" content="تسوق أحدث طائرات الدرون، المنتجات الذكية، والتقنيات العصرية بأفضل الأسعار من متجر تيك زون Tech Zone. شحن لمصر والسعودية.">
+    <meta name="keywords" content="تيك زون, Tech Zone, طائرة درون, متجر إلكتروني, أجهزة ذكية, درون V88">
+    <meta name="verify-admitad" content="83c8e24780" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TF0NP5E97N"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-TF0NP5E97N');
+    </script>
+
+    <!-- استدعاء Tailwind CSS وخط Cairo -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <meta name="verify-admitad" content="83c8e24780" />
+
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
         body {
             font-family: 'Cairo', sans-serif;
         }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen relative overflow-x-hidden">
 
     <!-- الهيدر (رأس الصفحة) -->
-    <header class="bg-white shadow-sm sticky top-0 z-50">
-        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-            <h1 class="text-2xl font-bold text-blue-600">تيك زون ⚡</h1>
+    <header class="bg-white shadow-sm sticky top-0 z-40">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            
+            <div class="flex items-center gap-4">
+                <!-- زرار الـ 3 شرط (القائمة) -->
+                <button id="toggle-menu-btn" class="flex items-center gap-2 bg-blue-50 text-blue-600 hover:bg-blue-100 px-3.5 py-2 rounded-lg font-bold transition-colors border border-blue-200">
+                    <!-- أيقونة الـ 3 شرط -->
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                    <span>الأقسام</span>
+                </button>
+
+                <h1 class="text-2xl font-bold text-blue-600">تيك زون ⚡</h1>
+            </div>
+
             <p class="text-sm text-gray-500 hidden sm:block">أحدث الأجهزة الذكية والألعاب المبتكرة بأفضل الأسعار</p>
         </div>
     </header>
 
-    <!-- بنر ترحيبي متناسق مع التكنولوجيا -->
-   <!-- بنر ترحيبي متناسق ومحدث بدون كود الخصم -->
+    <!-- الخلفية المظلمة عند فتح القائمة -->
+    <div id="menu-overlay" class="fixed inset-0 bg-black/50 z-50 hidden opacity-0 transition-opacity duration-300"></div>
+
+    <!-- القائمة الجانبية المنزلقة (Off-Canvas Drawer) -->
+    <aside id="sidebar" class="fixed top-0 right-0 h-full w-72 bg-white z-50 shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col">
+        <!-- رأس القائمة -->
+        <div class="p-5 bg-blue-600 text-white flex justify-between items-center">
+            <h3 class="text-lg font-bold flex items-center gap-2">
+                <span>📁</span> أقسام المتجر
+            </h3>
+            <!-- زرار الإغلاق X -->
+            <button id="close-menu-btn" class="text-white hover:bg-blue-700 p-1 rounded-lg transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- أزرار الأقسام بتنزل هنا برمجياً -->
+        <nav id="categories-menu" class="p-4 flex flex-col space-y-2 overflow-y-auto flex-grow">
+            <p class="text-xs text-gray-400">جاري تحميل الأقسام...</p>
+        </nav>
+    </aside>
+
+    <!-- بنر ترحيبي -->
     <section class="bg-blue-50 py-12 px-4 text-center">
         <div class="max-w-3xl mx-auto">
             <h2 class="text-3xl font-extrabold text-gray-900 mb-4">اكتشف عالم الأجهزة والتقنيات الذكية</h2>
             <p class="text-lg text-gray-600">اخترنا لك أفضل المنتجات التكنولوجية والدرونز الأكثر مبيعاً على علي إكسبريس. اضغط على زر الشراء للتحويل مباشرة إلى الموقع الرسمي والاستفادة من أقوى العروض الحالية.</p>
         </div>
-    </section><!-- بنر ترحيبي متناسق ومحدث بدون كود الخصم -->
+    </section>
 
-    <!-- شبكة المنتجات -->
-    <main class="max-w-6xl mx-auto px-4 py-12">
-        <h3 class="text-xl font-bold mb-8 border-r-4 border-blue-600 pr-3">أحدث التقنيات المضافة</h3>
-        
-        <!-- هنا هيتم عرض المنتجات تلقائياً بواسطة الجافا سكريبت -->
-        <div id="products-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            <!-- المنتجات هتنزل هنا برمجياً -->
+    <!-- منطقه المنتجات والأقسام -->
+    <main class="max-w-7xl mx-auto px-4 py-8 w-full flex-grow">
+        <div id="products-grid" class="w-full">
+            <!-- المنتجات والأقسام بتنزل هنا تلقائياً -->
         </div>
     </main>
 
     <!-- الفوتر (أسفل الصفحة) -->
-    <footer class="bg-gray-900 text-gray-400 py-8 text-center text-sm border-t border-gray-800">
+    <footer class="bg-gray-900 text-gray-400 py-8 text-center text-sm border-t border-gray-800 mt-auto">
         <p>© 2026 موقع تيك زون. جميع الحقوق محفوظة.</p>
         <p class="mt-2 text-xs">موقعنا يعرض مراجعات تقنية ويحولك للشراء من موقع علي إكسبريس الرسمي للاستفادة من نظام الأفلييت.</p>
     </footer>
 
-    <!-- تأكد أن ملف الـ JavaScript عندك مسمى بنفس هذا الاسم app.js وموجود في نفس الفولدر -->
+    <!-- استدعاء ملف الـ JavaScript -->
     <script src="app.js"></script>
 </body>
 </html>
