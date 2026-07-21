@@ -4,7 +4,7 @@ const products = [
         id: 1,
         title: "Lenovo V88 Drone 8K 4K - طائرة درون لينوفو الذكية",
         price: "1,744 EGP (130 ر.س)",
-        category: "طائرات الدرون",
+        category: "أجهزة", // تم التغيير إلى أجهزة
         image: "https://ae01.alicdn.com/kf/S36a082ebf3fb4192804c0552565b0886j.jpg_350x350.jpg", 
         affiliateUrl: "https://s.click.aliexpress.com/e/_c3C5z1ij",
         tag: "جديد مميز"
@@ -20,9 +20,9 @@ const products = [
     }
 ];
 
-// دالة تحويل النص إلى ID مناسب للروابط
+// دالة تحويل النص إلى ID مناسب للروابط (تدعم اللغة العربية)
 function slugify(text) {
-    return 'cat-' + text.replace(/\s+/g, '-').toLowerCase();
+    return 'cat-' + encodeURIComponent(text.trim().replace(/\s+/g, '-'));
 }
 
 // دالة لعرض المنتجات وبناء القائمة الجانبية
