@@ -11,7 +11,7 @@ const products = [
     },
     {
         id: 2,
-        title: "منتج مميز من علي إكسبريس", // تقدر تغير الاسم هنا
+        title: "Smart Stainless Steel Multifunctional Ring for Couple Mood Feeling Intelligent Temperature Sensitive Rings Waterproof Jewelry"
         price: "40 ج.م (3 ر.س)",
         category: "أكسسوارات وعروض",
         image: "https://ae01.alicdn.com/kf/S56b156e10772452bb0a774744c1ca0021.jpg_350x350.jpg", 
