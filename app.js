@@ -17,6 +17,15 @@ const products = [
         image: "https://ae01.alicdn.com/kf/S56b156e10772452bb0a774744c1ca0021.jpg_350x350.jpg", 
         affiliateUrl: "https://s.click.aliexpress.com/e/_c3yd30gB",
         tag: "عرض خاص"
+    },
+    {
+        id: 3,
+        title: "حامل الموبايل المغناطيسي الذكي 360",
+        price: "(16 ر.س) 220 ج.م ",
+        category: "أكسسوارات وعروض",
+        image: "https://ae01.alicdn.com/kf/S657d8242a71049d5aed4e54baec2d1968.jpg_350x350.jpg", 
+        affiliateUrl: "https://s.click.aliexpress.com/e/_c36sdHBD",
+        tag: "عرض خاص"
     }
 ];
 
